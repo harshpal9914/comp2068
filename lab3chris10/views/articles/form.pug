@@ -1,0 +1,9 @@
+extends ../layout
+
+block content
+	h1= title
+	form(method="POST")
+		input(type="text" value=article.title placeholder="Title" name="title")
+		input(type="text" value=article.authors placeholder="Authors" name="authors")
+		textarea(type="text" placeholder="body" name="body")= article.body
+		button(type="submit") Submit

@@ -1,0 +1,7 @@
+extends ../layout.pug
+
+block content
+	a(href="/articles/create") Create an Article
+	.articles
+		each article in articles
+			h1= article.title || '[NO TITLE]'

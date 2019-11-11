@@ -1,0 +1,9 @@
+extends ../layout
+
+block content
+	h1 Create an Article
+	form(method="POST")
+		input(type="text" placeholder="Title" name="title")
+		input(type="text" placeholder="Authors" name="authors")
+		textarea(type="text" placeholder="body" name="body")
+		button(type="submit") Submit

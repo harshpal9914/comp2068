@@ -1,0 +1,13 @@
+extends ../layout
+
+block content
+  h1 Create a new Project
+
+  form(method="POST")
+    input(name="title" placeholder="title of project")
+    input(name="grade" type="number")
+    input(name="class.title" placeholder="Class Title")
+    input(name="class.courseCode" placeholder="CourseCode")
+    input(name="class.teacher" placeholder="Teacher")
+
+    button(type="submit") Create Project

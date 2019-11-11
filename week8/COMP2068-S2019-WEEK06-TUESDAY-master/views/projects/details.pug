@@ -1,0 +1,12 @@
+extends ../layout
+
+block content
+  ul
+    li: a(href="/projects") Go Back
+    li: a(href=`/projects/${project._id}/edit`) Edit Project
+    li: a(href=`/projects/${project._id}/delete`) Delete Project
+  h1= project.title
+  h2 #{project.class.title} - #{project.class.courseCode}
+
+  h4= project.grade
+  h5= project.class.teacher

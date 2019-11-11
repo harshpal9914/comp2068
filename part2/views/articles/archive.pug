@@ -1,0 +1,16 @@
+extends ../layout.pug
+
+block content
+	a(href="/articles/create") Create an Article
+	.container
+		.row
+			each article in articles
+				.col-md-4
+					.card.mb-4.shadow-sm
+						.card-body
+							p.card-text= article.title
+							.d-flex.justify-content-between.align-items-center
+								.btn-group
+									a(href=`/articles/${article._id}`).btn.btn-sm.btn-outline-secondary(type='button') View
+									a(href=`/articles/${article._id}/edit`).btn.btn-sm.btn-outline-secondary(type='button') Edit
+								small.text-muted= article.date

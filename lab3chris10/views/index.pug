@@ -1,0 +1,12 @@
+extends layout
+
+block content
+	h1= title
+
+	p The user's role is: #{role}
+	if isLoggedIn
+		p Welcome to the Portfolio of Harshpal Singh #{user.username}
+	else
+		p Welcome to #{title}
+
+

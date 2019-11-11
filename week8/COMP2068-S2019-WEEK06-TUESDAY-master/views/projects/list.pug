@@ -1,0 +1,11 @@
+extends ../layout
+
+block content
+  h1 All Projects
+
+  a(href="/projects/new") Create Project
+
+  ul
+    each project in projects
+      li
+        a(href=`/projects/${project._id}`)= project.title
