@@ -1,0 +1,35 @@
+nav.navbar.navbar-expand-lg.navbar-light.bg-light
+    a.navbar-brand(href='/') Harshpal Singh' portfolio
+    button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
+        span.navbar-toggler-icon
+    #navbarSupportedContent.collapse.navbar-collapse
+        ul.navbar-nav.mr-auto
+            li.nav-item.active
+                a.nav-link(href='/')
+                    |
+                    span.sr-only (current)
+            li.nav-item
+                a.nav-link(href='/articles') Articles
+        ul.navbar-nav
+            //- Checking isLoggedIn from our middleware to change navigation
+            //- If we are logged in or not
+            if isLoggedIn
+                li.nav-item
+                    a.nav-link(href='/logout') Logout
+            else
+                li.nav-item
+                    a.nav-link(href='/login') Login
+                li.nav-item
+                    a.nav-link(href='/register') Register
+
+        ul.navbar-nav
+            li.nav-item
+                a.nav-link.active(href='#') Home
+            li.nav-item
+                a.nav-link(href='#') About Me
+            li.nav-item
+                a.nav-link(href='#') Projects
+            li.nav-item
+                a.nav-link(href='#') Services
+            li.nav-item
+                a.nav-link(href='contact.html') Contact
